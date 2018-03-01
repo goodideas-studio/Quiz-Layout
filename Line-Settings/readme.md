@@ -1,5 +1,5 @@
 # Line Settings
-![Line Settings](resources/setting.png)
+![Line Settings](resources/profile.png)
 
 ## Requirement
  - 模仿 Line 的設定、個人資料介面。
