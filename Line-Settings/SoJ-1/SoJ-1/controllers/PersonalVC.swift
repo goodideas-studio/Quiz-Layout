@@ -144,6 +144,7 @@ class PersonalVC: UITableViewController {
         if indexPath == [2, 0] {
 //            performSegue(withIdentifier: "KeyinNameSegue", sender: nil)
             let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NameVC") as? NameVC
+            nextVC?.navigationItem.title = "姓名"
             navigationController?.pushViewController(nextVC!, animated: true)
         }
     }

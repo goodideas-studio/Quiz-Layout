@@ -100,8 +100,9 @@ class SettingVC: UITableViewController {
         
         if indexPath == [0, 0] {
 //            performSegue(withIdentifier: "personalSegue", sender: nil)
-            
+
             let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalVC") as? PersonalVC
+            nextVC?.navigationItem.title = section0[indexPath.row]
             navigationController?.pushViewController(nextVC!, animated: true)
         }
 //        let nextViewController = PersonalVC()
