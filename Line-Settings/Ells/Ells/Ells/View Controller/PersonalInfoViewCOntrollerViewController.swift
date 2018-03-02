@@ -22,6 +22,7 @@ class PersonalInfoViewController: UIViewController {
     self.ProfilePic.clipsToBounds = true
       ProfilePic.layer.cornerRadius = 60
       nameToChange.layer.cornerRadius = 10
+    keepName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +38,11 @@ class PersonalInfoViewController: UIViewController {
       
     }
   }
-    
+  func keepName() {
+    let result = userdefault.value(forKey: "UpdatedName") as? String
+    print(result)
+    displayName.text = result!
+  }
   @IBAction func changeNameBtn(_ sender: UIButton) {
     
     let changeNameVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThridVC") as! ChangeNameViewController
@@ -45,6 +50,7 @@ class PersonalInfoViewController: UIViewController {
     self.present(changeNameVC, animated: true, completion: nil)
   }
 }
+
 
 extension PersonalInfoViewController: UserDefaultDelegate {
   
