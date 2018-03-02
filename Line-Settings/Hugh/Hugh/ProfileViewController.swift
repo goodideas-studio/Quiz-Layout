@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ProfileViewController: UIViewController {
   lazy var tableView: UITableView = {
     let tableView = UITableView(frame: .zero, style: .grouped)
     tableView.dataSource = self
@@ -9,29 +9,25 @@ class ViewController: UIViewController {
     return tableView
   }()
 
-  let settingSections = [
+  var settingSections = [
     SettingSection(cells: [
-      SettingCell(title: "個人資料", secondaryTitle: nil, nextViewController: ProfileViewController()),
-      SettingCell(title: "我的帳號", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "隱私設定", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "移動帳號設定", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "Keep", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "自動投稿變更後的個人圖片", secondaryTitle: nil, nextViewController: nil)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "貼圖", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "主題", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "我的錢包", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "姓名", secondaryTitle: "shavenking", nextViewController: UpdateProfileNameViewController())
     ]),
     SettingSection(cells: [
-      SettingCell(title: "提醒", secondaryTitle: "ON", nextViewController: nil),
-      SettingCell(title: "照片、移動", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "聊天", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "狀態消息", secondaryTitle: nil, nextViewController: nil)
+    ]),
+    SettingSection(cells: [
+      SettingCell(title: "ID", secondaryTitle: "shavenking", nextViewController: nil),
+      SettingCell(title: "允許利用 ID 加入好友", secondaryTitle: nil, nextViewController: nil),
+      SettingCell(title: "顯示行動條碼", secondaryTitle: nil, nextViewController: nil)
     ])
   ]
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = "設定"
 
     view.addSubview(tableView)
     tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,9 +35,16 @@ class ViewController: UIViewController {
     tableView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     tableView.reloadData()
   }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    settingSections[1].cells[0].secondaryTitle = UserDefaults.standard.object(forKey: "username") as? String
+    tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
+  }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
     return settingSections.count
   }

@@ -64,7 +64,7 @@ class LineTableViewCell: UITableViewCell {
     secondaryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
     secondaryTitleLabel.rightAnchor.constraint(equalTo: rightTriangleImageView.leftAnchor).isActive = true
     secondaryTitleLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
-    secondaryTitleLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
+    secondaryTitleLabel.leftAnchor.constraint(greaterThanOrEqualTo: titleLabel.rightAnchor).isActive = true
   }
 
   required init?(coder aDecoder: NSCoder) {
