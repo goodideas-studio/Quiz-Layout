@@ -14,4 +14,5 @@ struct SettingCell {
   var title: String
   var secondaryTitle: String?
   var nextViewController: UIViewController?
+  var hasSwitch: Bool
 }
