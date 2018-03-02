@@ -1,5 +1,10 @@
 # Line Settings
+
+## iOS 介面
 ![Line Settings](resources/profile.png)
+
+## Android 介面
+![Line Settings](resources/android.png)
 
 ## Requirement
  - 模仿 Line 的設定、個人資料介面。
