@@ -8,47 +8,43 @@
 
 import UIKit
 
-class PersonalTableViewController: UITableViewController,GetName {
-    
-    let userDefault = UserDefaults.standard
-    
-    var userName = ""
-    
-    func receive(name: String) {
-        userName = name
-    }
-    
-    
+class PersonalTableViewController: UITableViewController {
+
     // 元件 Outlet
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let userName = self.userDefault.string(forKey: "userName"){
-            nameLabel.text = userName
-        }
+        updateUserName()
+        userImage.layer.cornerRadius = userImage.frame.width / 2
+        userImage.clipsToBounds = true
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.userDefault.set(userName, forKey: "userName")
-        self.userDefault.synchronize()
-        nameLabel.text = userName
-
-        
+        updateUserName()
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "personalToName" {
-            let destinationViewController = segue.destination as! NameViewController
-            destinationViewController.nameDelegate = self
+    
+    // update UserDefault
+    func updateUserName() {
+        if let username = UserDefaults.standard.string(forKey: "userName") {
+            nameLabel.text = username
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "personalToName" {
+//            let destinationViewController = segue.destination as! NameViewController
+//        }
+//    }
+    
+
 
     // MARK: - Table view data source
 

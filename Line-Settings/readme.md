@@ -1,7 +1,7 @@
 # Line Settings
 
 ## iOS 介面
-![Line Settings](resources/profile.png)
+![Line Settings](resources/ios.png)
 
 ## Android 介面
 ![Line Settings](resources/android.png)

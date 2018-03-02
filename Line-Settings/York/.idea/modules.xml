@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/Line-Settings.iml" filepath="$PROJECT_DIR$/Line-Settings.iml" />
       <module fileurl="file://$PROJECT_DIR$/York.iml" filepath="$PROJECT_DIR$/York.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/York.iml" filepath="$PROJECT_DIR$/York.iml" />
+>>>>>>> ee4e8cf2869813f28ff8a03cf5763be11ba1de1f
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

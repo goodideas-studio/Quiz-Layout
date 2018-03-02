@@ -8,34 +8,48 @@
 
 import UIKit
 
-protocol GetName {
-    func receive(name:String)
-}
 
-class NameViewController: UIViewController {
+
+class NameViewController: UIViewController, UITextFieldDelegate {
     
-    var nameDelegate:GetName?
+    var textInput = 0
     
-    // 元件 Outlet
+    
+    // Outlet
     @IBOutlet weak var nameTextField: UITextField!
-    
-    // 元件 Action
+    @IBOutlet weak var textCount: UILabel!
+   
+    // Action
     @IBAction func storeName(_ sender: UIButton) {
-        nameDelegate?.receive(name: nameTextField.text!)
-        self.dismiss(animated: true, completion: nil)
+        UserDefaults.standard.set(nameTextField.text, forKey: "userName")
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func editingText(_ sender: UITextField) {
+        textInput = nameTextField.text?.characters.count ?? 0
+        self.textCount.text = "\(textInput)/20"
     }
     
     
-    
-    
-    // 額外功能 Outlet
-    @IBOutlet weak var textCount: UILabel!
-    @IBAction func editingText(_ sender: UITextField) {
+    // 限制字數
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        
+        if textInput + string.characters.count - range.length > 20 {
+            return false
+        } else {
+            return true
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let username = UserDefaults.standard.string(forKey: "userName") {
+            nameTextField.text = username
+            textInput = nameTextField.text?.characters.count ?? 0
+            self.textCount.text = "\(textInput)/20"
+        }
         
     }
 
