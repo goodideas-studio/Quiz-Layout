@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.showsVerticalScrollIndicator = false
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,12 +34,17 @@ class TableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView()
-        vw.backgroundColor = UIColor(red:239/255, green:239/255, blue:244/255, alpha:1.0)
-        return vw
-    }
-    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+////        if section != 0 {
+//            let vw = UIView()
+//            vw.backgroundColor = UIColor(red:239/255, green:239/255, blue:244/255, alpha:1.0)
+//            return vw
+//        }else{
+//            return nil
+//        }
+//
+//    }
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }

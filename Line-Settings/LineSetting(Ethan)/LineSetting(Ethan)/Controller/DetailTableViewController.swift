@@ -9,15 +9,28 @@
 import UIKit
 
 class DetailTableViewController: UITableViewController {
+    
+    
+    @IBAction func closeTheScreen(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        userImage.layer.masksToBounds = true
+        userImage.layer.cornerRadius = userImage.frame.width/2
+        userImage.image = UIImage(named: "s1")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameLabel.text = UserDefaults.standard.string(forKey: "newName")
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +44,22 @@ class DetailTableViewController: UITableViewController {
             performSegue(withIdentifier: "goModify", sender: nil)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goModify"{
+            if let modifyVC = segue.destination as? ModifyViewController{
+                modifyVC.nameFromDetailView = nameLabel.text
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let vw = UIView()
+        vw.backgroundColor = UIColor(red:239/255, green:239/255, blue:244/255, alpha:1.0)
+        return vw
+    }
+    
+    
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

@@ -8,12 +8,30 @@
 
 import UIKit
 
-class ModifyViewController: UIViewController {
+class ModifyViewController: UIViewController, UITextFieldDelegate {
+    
+    
+    var nameFromDetailView:String?
 
+    @IBOutlet weak var textLengthLabel: UILabel!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func save(_ sender: UIButton) {
+        UserDefaults.standard.setValue(textField.text, forKey: "newName")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.text = nameFromDetailView
     }
 
     override func didReceiveMemoryWarning() {
