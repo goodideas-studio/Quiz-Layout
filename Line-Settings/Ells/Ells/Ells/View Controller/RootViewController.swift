@@ -34,5 +34,8 @@ class RootViewController: UITableViewController {
       
     }
 
+  @IBAction func goToEditPage(_ sender: UIButton) {
+    
+  }
   
 }
