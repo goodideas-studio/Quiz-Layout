@@ -12,6 +12,9 @@ class ChangeNameViewController: UIViewController {
 
   @IBOutlet weak var saveBtn: UIButton!
   @IBOutlet weak var inputName: UITextField!
+  
+  
+  
   let userdefualt = UserDefaults.standard
   var delegate: UserDefaultDelegate?
   
