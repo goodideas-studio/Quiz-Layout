@@ -99,7 +99,10 @@ class SettingVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath == [0, 0] {
-            performSegue(withIdentifier: "personalSegue", sender: nil)
+//            performSegue(withIdentifier: "personalSegue", sender: nil)
+            
+            let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalVC") as? PersonalVC
+            navigationController?.pushViewController(nextVC!, animated: true)
         }
 //        let nextViewController = PersonalVC()
 //        navigationController?.pushViewController(nextViewController, animated: true)

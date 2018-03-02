@@ -200,7 +200,7 @@
         <!--NameVC-->
         <scene sceneID="v4o-xt-I1z">
             <objects>
-                <viewController id="vtW-in-LnG" customClass="NameVC" customModule="SoJ_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameVC" id="vtW-in-LnG" customClass="NameVC" customModule="SoJ_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vz-Ef-BLB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,6 +213,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeLength:" destination="vtW-in-LnG" eventType="editingChanged" id="hWK-hY-eAv"/>
+                                    <outlet property="delegate" destination="vtW-in-LnG" id="NOd-mw-sx0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBr-bl-5b8">
                                 <rect key="frame" x="127" y="164" width="120" height="30"/>

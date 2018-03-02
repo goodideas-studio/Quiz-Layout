@@ -8,27 +8,31 @@
 
 import UIKit
 
-class NameVC: UIViewController {
+class NameVC: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var keyinNameTextField: UITextField!
     @IBOutlet weak var characterLabel: UILabel!
+    
+    @IBAction func changeLength(_ sender: Any) {
+        characterLabel.text =  "\(keyinNameTextField.text!.count)/20"
+    }
     
     @IBAction func saveNameButton(_ sender: Any) {
 
         UserDefaults.standard.set(keyinNameTextField.text, forKey: "userName")
         UserDefaults.standard.synchronize()
         
-//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "PersonalVC") as! PersonalVC
-        if let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalVC") as? PersonalVC
-        {
-            navigationController?.pushViewController(nextVC, animated: true)
-        }
+//        if let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalVC") as? PersonalVC
+//        { }
+            navigationController?.popViewController(animated: true)
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField.text?.count)! + string.count > 20 {
+            return false
+        }
+        return true
     }
     
     override func viewDidLoad() {
