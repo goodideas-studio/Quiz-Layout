@@ -30,7 +30,7 @@ class LineTableViewCell: UITableViewCell {
   var displayRightAngle = true {
     didSet {
       if displayRightAngle {
-        rightTriangleImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        rightTriangleImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
       } else {
         rightTriangleImageView.widthAnchor.constraint(equalToConstant: 0).isActive = true
       }
@@ -42,29 +42,32 @@ class LineTableViewCell: UITableViewCell {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
     contentView.addSubview(iconImageView)
+    contentView.addSubview(rightTriangleImageView)
+    contentView.addSubview(titleLabel)
+    contentView.addSubview(secondaryTitleLabel)
+
     iconImageView.translatesAutoresizingMaskIntoConstraints = false
-    iconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+    iconImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8).isActive = true
     iconImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
     iconImageView.widthAnchor.constraint(equalToConstant: 0).isActive = true
 
-    contentView.addSubview(rightTriangleImageView)
     rightTriangleImageView.translatesAutoresizingMaskIntoConstraints = false
-    rightTriangleImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-    rightTriangleImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
-    rightTriangleImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+    rightTriangleImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -8).isActive = true
+    rightTriangleImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    rightTriangleImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+    rightTriangleImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+    rightTriangleImageView.alpha = 0.5
 
-    contentView.addSubview(titleLabel)
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor).isActive = true
+    titleLabel.leftAnchor.constraint(equalTo: iconImageView.rightAnchor, constant: 8).isActive = true
     titleLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
-    titleLabel.rightAnchor.constraint(lessThanOrEqualTo: contentView.rightAnchor).isActive = true
 
     secondaryTitleLabel.textColor = .gray
-    contentView.addSubview(secondaryTitleLabel)
     secondaryTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-    secondaryTitleLabel.rightAnchor.constraint(equalTo: rightTriangleImageView.leftAnchor).isActive = true
+    secondaryTitleLabel.rightAnchor.constraint(equalTo: rightTriangleImageView.leftAnchor, constant: -8).isActive = true
     secondaryTitleLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
-    secondaryTitleLabel.leftAnchor.constraint(greaterThanOrEqualTo: titleLabel.rightAnchor).isActive = true
+    secondaryTitleLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
+    secondaryTitleLabel.setContentHuggingPriority(.required, for: .horizontal)
   }
 
   required init?(coder aDecoder: NSCoder) {
