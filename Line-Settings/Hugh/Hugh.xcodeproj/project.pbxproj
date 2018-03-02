@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69D601627FC3A6FF9B9B4938 /* LineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D60326028BAA33CACEA888 /* LineTableViewCell.swift */; };
 		69D609033A38956FF9307C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D60CB4C20A772DB3732573 /* LaunchScreen.storyboard */; };
 		69D60ADF54825C46756D62CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D6087D9034C9DE795E394C /* Main.storyboard */; };
 		69D60B0C14A50B5E3BC8FE00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D608467CED11D41D792EFC /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		69D60163F38DFDB61C2CC7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69D60326028BAA33CACEA888 /* LineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineTableViewCell.swift; sourceTree = "<group>"; };
 		69D606F2FF04AD268F18CB68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69D608467CED11D41D792EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69D608ED44593A23C0F8411F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				69D608467CED11D41D792EFC /* AppDelegate.swift */,
 				69D6087D9034C9DE795E394C /* Main.storyboard */,
 				69D606F2FF04AD268F18CB68 /* ViewController.swift */,
+				69D60326028BAA33CACEA888 /* LineTableViewCell.swift */,
 			);
 			path = Hugh;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				69D60B0C14A50B5E3BC8FE00 /* AppDelegate.swift in Sources */,
 				69D60F4C3506C15DDD102131 /* ViewController.swift in Sources */,
+				69D601627FC3A6FF9B9B4938 /* LineTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
