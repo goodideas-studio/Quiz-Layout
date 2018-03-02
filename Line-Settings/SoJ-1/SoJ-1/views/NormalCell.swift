@@ -10,6 +10,9 @@ import UIKit
 
 class NormalCell: UITableViewCell {
 
+    @IBOutlet weak var rightTextLabel: UILabel!
+    @IBOutlet weak var personalRightTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,19 +10,26 @@ import UIKit
 
 class PersonalVC: UITableViewController {
     
+    var userName: String?
+    
+    @IBOutlet var personalTableView: UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let name = UserDefaults.standard.object(forKey: "userName") as? String {
+            userName = name
+            
+            personalTableView.reloadData()
+        }
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
@@ -48,35 +55,96 @@ class PersonalVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 18
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 243/255, alpha: 1)
-        return headerView
+        let headerLabel = UILabel(frame: CGRect(x:13, y: 0, width: 300, height: 15))
+        headerLabel.textColor = UIColor.gray
+        headerLabel.font = UIFont.systemFont(ofSize: 12.0)
+        
+        switch  section {
+        case 3:
+            headerLabel.text = "狀態消息"
+            headerView.addSubview(headerLabel)
+            return headerView
+        default:
+            return headerView
+        }
     
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15
+        return 18
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
         footerView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 243/255, alpha: 1)
-        return footerView
+        
+        let footerLabel = UILabel(frame: CGRect(x:13, y: 3, width: 300, height: 15))
+        footerLabel.textColor = UIColor.gray
+        footerLabel.font = UIFont.systemFont(ofSize: 12.0)
+        
+        switch section {
+        case 1:
+            footerLabel.text = "個人圖片變更完畢之後，將會自動投稿到動態消息上。"
+            footerView.addSubview(footerLabel)
+            return footerView
+        case 4:
+            footerLabel.text = "其他用戶可透過ID搜尋將您加入好友。"
+            footerView.addSubview(footerLabel)
+            return footerView
+            
+        default: return footerView
+        }
+        
+        //return footerView
     }
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let photoCell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonalCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonalCell", for: indexPath) as! NormalCell
+        let switchCell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath)
         
         switch indexPath {
         case [0,0]: return photoCell
+        case [1,0]:
+            switchCell.textLabel?.text = "自動投稿變更後的個人圖片"
+            return switchCell
+        case [2,0]:
+            cell.textLabel?.text = "姓名"
+            cell.personalRightTextLabel?.text = userName
+            cell.accessoryType = .disclosureIndicator
+            return cell
+        case [3,0]:
+            cell.textLabel?.text = "我要去創造那些老了以後可以說的故事！"
+            cell.accessoryType = .disclosureIndicator
+            return cell
+        case [4,0]:
+            cell.textLabel?.text = "ID"
+            cell.personalRightTextLabel?.text = "slamdon"
+            return cell
+        case [4,1]:
+            switchCell.textLabel?.text = "允許利用ID加入好友"
+            return switchCell
+        case [5,0]:
+            cell.textLabel?.text = "顯示行動條碼"
+            cell.accessoryType = .disclosureIndicator
+            return cell
+            
+            
         default: return cell
         }
      }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath == [2, 0] {
+            performSegue(withIdentifier: "KeyinNameSegue", sender: nil)
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.

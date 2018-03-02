@@ -39,8 +39,13 @@ class SettingVC: UITableViewController {
         default: return 0
         }
     }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 18
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 18
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -54,11 +59,7 @@ class SettingVC: UITableViewController {
         default: return headerView
         }
     }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 15
-    }
-    
+
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
         footerView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 243/255, alpha: 1)
@@ -95,36 +96,13 @@ class SettingVC: UITableViewController {
         
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath)
-//        //if such cell exists and destination controller (the one to show) exists too..
-//        if let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "PersonalVC") as? PersonalVC {
-//            //This is a bonus, I will be showing at destionation controller the same text of the cell from where it comes...
-////            if let text = subjectCell.textLabel?.text {
-////                destinationViewController.textToShow = text
-////            } else {
-////                destinationViewController.textToShow = "Tapped Cell's textLabel is empty"
-////            }
-//            //Then just push the controller into the view hierarchy
-//            navigationController?.pushViewController(destinationViewController, animated: true)
-//        }
-//        
-//    }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        switch indexPath {
-//        case [0, 0]:
-//
-//            navigationController?.pushViewController(PersonalVC, animated: true)
-//        default:
-//            break
-//        }
-//    }
-    
-//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let destinationVC = segue.destination as! PersonalVC
-//        let cell = sender as! UITableViewCell
-//        destinationVC.navigationItem.title = cell.textLabel?.text
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath == [0, 0] {
+            performSegue(withIdentifier: "personalSegue", sender: nil)
+        }
+//        let nextViewController = PersonalVC()
+//        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 
 }
