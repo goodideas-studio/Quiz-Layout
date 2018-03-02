@@ -15,6 +15,7 @@
 		4DAAF6022048EA100037DE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF6002048EA100037DE33 /* LaunchScreen.storyboard */; };
 		4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */; };
 		4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */; };
+		4DAAF6112048FB260037DE33 /* userDefaultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4DAAF6032048EA100037DE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewCOntrollerViewController.swift; sourceTree = "<group>"; };
 		4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
+		4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaultDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAAF5F42048EA100037DE33 /* AppDelegate.swift */,
+				4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				4DAAF5F72048EA100037DE33 /* ViewController.swift in Sources */,
 				4DAAF5FD2048EA100037DE33 /* Ells.xcdatamodeld in Sources */,
 				4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */,
+				4DAAF6112048FB260037DE33 /* userDefaultDelegate.swift in Sources */,
 				4DAAF5F52048EA100037DE33 /* AppDelegate.swift in Sources */,
 				4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */,
 			);
