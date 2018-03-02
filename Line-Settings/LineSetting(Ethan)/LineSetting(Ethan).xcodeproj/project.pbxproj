@@ -16,6 +16,7 @@
 		D6462A8B2048FA9A00B48005 /* PersonDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6462A8A2048FA9A00B48005 /* PersonDetailTableViewCell.swift */; };
 		D6462A8F2049014B00B48005 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6462A8E2049014B00B48005 /* DetailTableViewController.swift */; };
 		D6462A912049017700B48005 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6462A902049017700B48005 /* ModifyViewController.swift */; };
+		D6AA6FDA20493A3F00E86B61 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AA6FD920493A3F00E86B61 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D6462A8A2048FA9A00B48005 /* PersonDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D6462A8E2049014B00B48005 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		D6462A902049017700B48005 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		D6AA6FD920493A3F00E86B61 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D6462A872048E3BB00B48005 /* Model */,
 				D6462A7A2048E14D00B48005 /* Assets.xcassets */,
 				D6462A7C2048E14D00B48005 /* LaunchScreen.storyboard */,
+				D6AA6FD920493A3F00E86B61 /* UserDefaults.swift */,
 				D6462A7F2048E14D00B48005 /* Info.plist */,
 			);
 			path = "LineSetting(Ethan)";
@@ -177,6 +180,7 @@
 				D6462A892048EB5800B48005 /* TableViewController.swift in Sources */,
 				D6462A742048E14D00B48005 /* AppDelegate.swift in Sources */,
 				D6462A912049017700B48005 /* ModifyViewController.swift in Sources */,
+				D6AA6FDA20493A3F00E86B61 /* UserDefaults.swift in Sources */,
 				D6462A8B2048FA9A00B48005 /* PersonDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
