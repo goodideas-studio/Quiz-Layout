@@ -1,5 +1,5 @@
 //
-//  name.swift
+//  NameVC.swift
 //  SoJ-1
 //
 //  Created by 高菘駿 on 2018/3/2.
