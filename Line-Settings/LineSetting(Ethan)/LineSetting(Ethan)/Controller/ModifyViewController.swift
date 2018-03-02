@@ -20,7 +20,14 @@ class ModifyViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let countOfWords = string.count + (textField.text?.count)! - range.length
+        if countOfWords > 20{
+            return false
+        }else{
+            return true
+        }
+    }
     
     
     var nameFromDetailView:String?
