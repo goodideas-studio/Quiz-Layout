@@ -40,6 +40,7 @@ class DetailTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0,3]{
             performSegue(withIdentifier: "goModify", sender: nil)
         }
@@ -59,6 +60,7 @@ class DetailTableViewController: UITableViewController {
         return vw
     }
     
+   
     
     // MARK: - Table view data source
 

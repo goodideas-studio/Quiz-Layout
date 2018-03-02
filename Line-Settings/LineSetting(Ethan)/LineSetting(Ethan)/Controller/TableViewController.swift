@@ -29,6 +29,7 @@ class TableViewController: UITableViewController {
     }
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == [0,0] {
             performSegue(withIdentifier: "showDetail", sender: nil)
         }
