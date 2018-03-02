@@ -2,6 +2,8 @@ package com.androidcamp.york.line_settings_york
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
+import android.support.annotation.RequiresApi
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,8 +22,10 @@ class GroupAdapter(var items: List<Item>, val context: Context) : RecyclerView.A
         return items.size
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: ItemHolder?, position: Int) {
         val item = items[position]
+        // if item is title
         if (item.imageId == 0) {
             holder?.setIconVisibility(true)
             holder?.setItemName(item.name)
@@ -31,6 +35,7 @@ class GroupAdapter(var items: List<Item>, val context: Context) : RecyclerView.A
         }
 
         if(item.imageId != 0) {
+            holder?.setItemStyle()
             holder?.itemView?.setOnClickListener {
                 Log.d("onBindViewHolder", "position: ${position}")
                 when (item.name) {
@@ -38,6 +43,8 @@ class GroupAdapter(var items: List<Item>, val context: Context) : RecyclerView.A
                     else -> showEnterMessage(item.name)
                 }
             }
+        } else {
+            holder?.setTitleSytle()
         }
     }
 
@@ -64,6 +71,19 @@ class GroupAdapter(var items: List<Item>, val context: Context) : RecyclerView.A
     inner class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewItemName = itemView.findViewById<TextView>(R.id.textView_item_name)
         var imageViewIcon = itemView.findViewById<ImageView>(R.id.imageView_item_icon)
+
+        @RequiresApi(Build.VERSION_CODES.M)
+        fun setTitleSytle() {
+            textViewItemName.setTextColor(context.getColor(R.color.md_blue_700))
+            textViewItemName.textSize = 16f
+        }
+
+        @RequiresApi(Build.VERSION_CODES.M)
+        fun setItemStyle() {
+            textViewItemName.setTextColor(context.getColor(R.color.md_black_1000))
+            textViewItemName.textSize = 18f
+            imageViewIcon.setImageDrawable(context.getDrawable(R.drawable.ic_account_circle_black_18dp))
+        }
 
         fun setIconVisibility(gone: Boolean) {
             if (gone) {
