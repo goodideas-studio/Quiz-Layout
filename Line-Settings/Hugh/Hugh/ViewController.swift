@@ -11,21 +11,21 @@ class ViewController: UIViewController {
 
   let settingSections = [
     SettingSection(cells: [
-      SettingCell(title: "個人資料", secondaryTitle: nil, nextViewController: ProfileViewController()),
-      SettingCell(title: "我的帳號", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "隱私設定", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "移動帳號設定", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "Keep", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "個人資料", secondaryTitle: nil, nextViewController: ProfileViewController(), hasSwitch: false),
+      SettingCell(title: "我的帳號", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "隱私設定", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "移動帳號設定", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "Keep", secondaryTitle: nil, nextViewController: nil, hasSwitch: false)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "貼圖", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "主題", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "我的錢包", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "貼圖", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "主題", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "我的錢包", secondaryTitle: nil, nextViewController: nil, hasSwitch: false)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "提醒", secondaryTitle: "ON", nextViewController: nil),
-      SettingCell(title: "照片、移動", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "聊天", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "提醒", secondaryTitle: "ON", nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "照片、移動", secondaryTitle: nil, nextViewController: nil, hasSwitch: false),
+      SettingCell(title: "聊天", secondaryTitle: nil, nextViewController: nil, hasSwitch: false)
     ])
   ]
 
@@ -55,6 +55,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     cell.title = settingSections[indexPath.section].cells[indexPath.row].title
     cell.secondaryTitle = settingSections[indexPath.section].cells[indexPath.row].secondaryTitle
     cell.displayRightAngle = settingSections[indexPath.section].cells[indexPath.row].nextViewController != nil
+    cell.displaySwitch = settingSections[indexPath.section].cells[indexPath.row].hasSwitch
     return cell
   }
 
