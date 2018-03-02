@@ -4,32 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.techapp.james.linesetting.view.setting.SettingActivity">
+    tools:context="com.techapp.james.linesetting.view.second.SecondActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="381dp"
+        android:layout_height="457dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:id="@+id/secondRecycleView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:background="@color/colorGreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="95dp"
-            android:layout_height="46dp"
-            android:text="設定"
+            android:id="@+id/titleTextView"
+            android:layout_width="111dp"
+            android:layout_height="38dp"
+            android:text="個人資料"
             android:textColor="@color/colorWhite"
-            android:textSize="25sp"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/settingRecyclerView"
-        android:layout_width="380dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </android.support.constraint.ConstraintLayout>
