@@ -14,6 +14,9 @@
 		F7F8F06A2048E1600067D53C /* PersonalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F0692048E1600067D53C /* PersonalVC.swift */; };
 		F7F8F06C2048E17B0067D53C /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F06B2048E17B0067D53C /* NameVC.swift */; };
 		F7F8F06E2048E1990067D53C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F06D2048E1990067D53C /* SettingVC.swift */; };
+		F7F8F0712048E4CC0067D53C /* NormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F0702048E4CC0067D53C /* NormalCell.swift */; };
+		F7F8F0742048E6FD0067D53C /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F0732048E6FD0067D53C /* SwitchCell.swift */; };
+		F7F8F0762048FE770067D53C /* photoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8F0752048FE770067D53C /* photoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		F7F8F0692048E1600067D53C /* PersonalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalVC.swift; sourceTree = "<group>"; };
 		F7F8F06B2048E17B0067D53C /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		F7F8F06D2048E1990067D53C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		F7F8F0702048E4CC0067D53C /* NormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCell.swift; sourceTree = "<group>"; };
+		F7F8F0732048E6FD0067D53C /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		F7F8F0752048FE770067D53C /* photoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		F7F8F0562048E1120067D53C /* SoJ-1 */ = {
 			isa = PBXGroup;
 			children = (
+				F7F8F0722048E4D20067D53C /* views */,
 				F7F8F06F2048E1B30067D53C /* controllers */,
 				F7F8F0572048E1120067D53C /* AppDelegate.swift */,
 				F7F8F05B2048E1120067D53C /* Main.storyboard */,
@@ -76,6 +83,16 @@
 				F7F8F06B2048E17B0067D53C /* NameVC.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		F7F8F0722048E4D20067D53C /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F7F8F0702048E4CC0067D53C /* NormalCell.swift */,
+				F7F8F0732048E6FD0067D53C /* SwitchCell.swift */,
+				F7F8F0752048FE770067D53C /* photoCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +168,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F8F0582048E1120067D53C /* AppDelegate.swift in Sources */,
+				F7F8F0762048FE770067D53C /* photoCell.swift in Sources */,
 				F7F8F06E2048E1990067D53C /* SettingVC.swift in Sources */,
 				F7F8F06C2048E17B0067D53C /* NameVC.swift in Sources */,
+				F7F8F0712048E4CC0067D53C /* NormalCell.swift in Sources */,
 				F7F8F06A2048E1600067D53C /* PersonalVC.swift in Sources */,
+				F7F8F0742048E6FD0067D53C /* SwitchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
