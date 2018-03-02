@@ -13,6 +13,8 @@
 		4DAAF5FD2048EA100037DE33 /* Ells.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF5FB2048EA100037DE33 /* Ells.xcdatamodeld */; };
 		4DAAF5FF2048EA100037DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF5FE2048EA100037DE33 /* Assets.xcassets */; };
 		4DAAF6022048EA100037DE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF6002048EA100037DE33 /* LaunchScreen.storyboard */; };
+		4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */; };
+		4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4DAAF5FE2048EA100037DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DAAF6012048EA100037DE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAAF6032048EA100037DE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewCOntrollerViewController.swift; sourceTree = "<group>"; };
+		4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,9 @@
 		4DAAF5F32048EA100037DE33 /* Ells */ = {
 			isa = PBXGroup;
 			children = (
-				4DAAF5F42048EA100037DE33 /* AppDelegate.swift */,
-				4DAAF5F62048EA100037DE33 /* ViewController.swift */,
+				4DAAF60B2048EB280037DE33 /* Module */,
+				4DAAF60A2048EB1C0037DE33 /* View Controller */,
+				4DAAF6092048EAFD0037DE33 /* View */,
 				4DAAF5F82048EA100037DE33 /* Main.storyboard */,
 				4DAAF5FE2048EA100037DE33 /* Assets.xcassets */,
 				4DAAF6002048EA100037DE33 /* LaunchScreen.storyboard */,
@@ -65,6 +70,31 @@
 				4DAAF5FB2048EA100037DE33 /* Ells.xcdatamodeld */,
 			);
 			path = Ells;
+			sourceTree = "<group>";
+		};
+		4DAAF6092048EAFD0037DE33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DAAF60A2048EB1C0037DE33 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4DAAF5F62048EA100037DE33 /* ViewController.swift */,
+				4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */,
+				4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		4DAAF60B2048EB280037DE33 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				4DAAF5F42048EA100037DE33 /* AppDelegate.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +171,9 @@
 			files = (
 				4DAAF5F72048EA100037DE33 /* ViewController.swift in Sources */,
 				4DAAF5FD2048EA100037DE33 /* Ells.xcdatamodeld in Sources */,
+				4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */,
 				4DAAF5F52048EA100037DE33 /* AppDelegate.swift in Sources */,
+				4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
