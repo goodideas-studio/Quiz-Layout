@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4DAAF5F52048EA100037DE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF5F42048EA100037DE33 /* AppDelegate.swift */; };
-		4DAAF5F72048EA100037DE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF5F62048EA100037DE33 /* ViewController.swift */; };
 		4DAAF5FA2048EA100037DE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF5F82048EA100037DE33 /* Main.storyboard */; };
 		4DAAF5FD2048EA100037DE33 /* Ells.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF5FB2048EA100037DE33 /* Ells.xcdatamodeld */; };
 		4DAAF5FF2048EA100037DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF5FE2048EA100037DE33 /* Assets.xcassets */; };
 		4DAAF6022048EA100037DE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAAF6002048EA100037DE33 /* LaunchScreen.storyboard */; };
 		4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */; };
 		4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */; };
-		4DAAF6112048FB260037DE33 /* userDefaultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */; };
+		4DAAF6112048FB260037DE33 /* UserDefaultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF6102048FB260037DE33 /* UserDefaultDelegate.swift */; };
+		4DAAF613204928580037DE33 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF612204928580037DE33 /* RootViewController.swift */; };
+		4DAAF615204929770037DE33 /* RootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAF614204929770037DE33 /* RootCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DAAF5F12048EA100037DE33 /* Ells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAAF5F42048EA100037DE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DAAF5F62048EA100037DE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DAAF5F92048EA100037DE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DAAF5FC2048EA100037DE33 /* Ells.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ells.xcdatamodel; sourceTree = "<group>"; };
 		4DAAF5FE2048EA100037DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,7 +29,9 @@
 		4DAAF6032048EA100037DE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewCOntrollerViewController.swift; sourceTree = "<group>"; };
 		4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
-		4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaultDelegate.swift; sourceTree = "<group>"; };
+		4DAAF6102048FB260037DE33 /* UserDefaultDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDelegate.swift; sourceTree = "<group>"; };
+		4DAAF612204928580037DE33 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4DAAF614204929770037DE33 /* RootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +86,10 @@
 		4DAAF60A2048EB1C0037DE33 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DAAF5F62048EA100037DE33 /* ViewController.swift */,
 				4DAAF60C2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift */,
 				4DAAF60E2048F4000037DE33 /* ChangeNameViewController.swift */,
+				4DAAF612204928580037DE33 /* RootViewController.swift */,
+				4DAAF614204929770037DE33 /* RootCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -95,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAAF5F42048EA100037DE33 /* AppDelegate.swift */,
-				4DAAF6102048FB260037DE33 /* userDefaultDelegate.swift */,
+				4DAAF6102048FB260037DE33 /* UserDefaultDelegate.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -172,10 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DAAF5F72048EA100037DE33 /* ViewController.swift in Sources */,
 				4DAAF5FD2048EA100037DE33 /* Ells.xcdatamodeld in Sources */,
 				4DAAF60F2048F4000037DE33 /* ChangeNameViewController.swift in Sources */,
-				4DAAF6112048FB260037DE33 /* userDefaultDelegate.swift in Sources */,
+				4DAAF613204928580037DE33 /* RootViewController.swift in Sources */,
+				4DAAF6112048FB260037DE33 /* UserDefaultDelegate.swift in Sources */,
+				4DAAF615204929770037DE33 /* RootCell.swift in Sources */,
 				4DAAF5F52048EA100037DE33 /* AppDelegate.swift in Sources */,
 				4DAAF60D2048F07F0037DE33 /* PersonalInfoViewCOntrollerViewController.swift in Sources */,
 			);

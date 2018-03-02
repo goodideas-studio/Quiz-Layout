@@ -1,6 +1,7 @@
 package com.androidcamp.york.line_settings_york
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +24,20 @@ class InfoItemAdapter(var infoItems: List<InfoItem>, val context: Context): Recy
         if(!infoItems[position].hasCheckBox) {
             holder?.noCheckBox()
         }
+
+        holder?.itemView?.setOnClickListener {
+            when(infoItems[position].title) {
+                "姓名" -> startNameActivity()
+            }
+        }
     }
+
+    fun startNameActivity() {
+        val intent = Intent()
+        intent.setClass(context, NameActivity::class.java)
+        context.startActivity(intent)
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): InfoItemHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.infoitem_personalinfo_checkbox, parent, false)

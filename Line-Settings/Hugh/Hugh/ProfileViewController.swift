@@ -11,18 +11,18 @@ class ProfileViewController: UIViewController {
 
   var settingSections = [
     SettingSection(cells: [
-      SettingCell(title: "自動投稿變更後的個人圖片", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "自動投稿變更後的個人圖片", secondaryTitle: nil, nextViewController: nil, hasSwitch: true)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "姓名", secondaryTitle: "shavenking", nextViewController: UpdateProfileNameViewController())
+      SettingCell(title: "姓名", secondaryTitle: "shavenking", nextViewController: UpdateProfileNameViewController(), hasSwitch:  false)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "狀態消息", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "狀態消息", secondaryTitle: nil, nextViewController: nil, hasSwitch:  false)
     ]),
     SettingSection(cells: [
-      SettingCell(title: "ID", secondaryTitle: "shavenking", nextViewController: nil),
-      SettingCell(title: "允許利用 ID 加入好友", secondaryTitle: nil, nextViewController: nil),
-      SettingCell(title: "顯示行動條碼", secondaryTitle: nil, nextViewController: nil)
+      SettingCell(title: "ID", secondaryTitle: "shavenking", nextViewController: nil, hasSwitch:  false),
+      SettingCell(title: "允許利用 ID 加入好友", secondaryTitle: nil, nextViewController: nil, hasSwitch: true),
+      SettingCell(title: "顯示行動條碼", secondaryTitle: nil, nextViewController: nil, hasSwitch:  false)
     ])
   ]
 
@@ -58,6 +58,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     cell.title = settingSections[indexPath.section].cells[indexPath.row].title
     cell.secondaryTitle = settingSections[indexPath.section].cells[indexPath.row].secondaryTitle
     cell.displayRightAngle = settingSections[indexPath.section].cells[indexPath.row].nextViewController != nil
+    cell.displaySwitch = settingSections[indexPath.section].cells[indexPath.row].hasSwitch
     return cell
   }
 

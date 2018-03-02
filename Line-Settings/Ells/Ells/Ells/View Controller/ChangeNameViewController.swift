@@ -12,12 +12,16 @@ class ChangeNameViewController: UIViewController {
 
   @IBOutlet weak var saveBtn: UIButton!
   @IBOutlet weak var inputName: UITextField!
+  
+  
+  
   let userdefualt = UserDefaults.standard
+  var delegate: UserDefaultDelegate?
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-            }
+      
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,12 +32,15 @@ class ChangeNameViewController: UIViewController {
     if inputName.text! != " " {
       userdefualt.set(inputName.text!, forKey: "UpdatedName")
       userdefualt.synchronize()
-      print(userdefualt.object(forKey: "UpdatedName") )
+      print(userdefualt.object(forKey: "UpdatedName")! )
+      
     } else {
       
     }
-    let personalInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! PersonalInfoViewController
-    self.present(personalInfoVC, animated: true, completion: nil)
+//    let personalInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! PersonalInfoViewController s
+    delegate?.updateName(noNeed: inputName.text!)
+    dismiss(animated: true, completion: nil)
+//    self.present(personalInfoVC, animated: true, completion: nil)
 
   }
   

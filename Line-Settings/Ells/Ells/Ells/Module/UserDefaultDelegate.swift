@@ -9,6 +9,6 @@
 import Foundation
 
 protocol UserDefaultDelegate {
-  func updateName(userDefault: UserDefaults)
+  func updateName(noNeed: String)
   
 }
