@@ -17,6 +17,7 @@ class ThirdActivity : Activity() {
         setContentView(R.layout.activity_third)
         saveModel= SaveModel(this)
         name=editText
+        name!!.setText(saveModel!!.readData().toString())
         saveButton.setOnClickListener {
             UIData.setName(name!!.text.toString())
             this@ThirdActivity.saveModel!!.saveData(name!!.text.toString())

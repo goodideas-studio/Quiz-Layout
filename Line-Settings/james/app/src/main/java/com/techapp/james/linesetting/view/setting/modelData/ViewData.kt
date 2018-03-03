@@ -24,6 +24,6 @@ object ViewData : ArrayList<Item>() {
         this.add(Item(R.drawable.ic_action_test,"提醒"))
         this.add(Item(R.drawable.ic_action_test,"照片、影片"))
         this.add(Item(R.drawable.ic_action_test,"聊天"))
-        this.add(Item(R.drawable.ic_action_test,"聊天"))
+       // this.add(Item(R.drawable.ic_action_test,"聊天"))
     }
 }

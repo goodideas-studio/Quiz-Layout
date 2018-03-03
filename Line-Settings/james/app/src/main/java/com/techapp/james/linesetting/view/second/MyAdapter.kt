@@ -86,5 +86,4 @@ class MyAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
     override fun getItemCount(): Int {
         return data.size
     }
-
 }
