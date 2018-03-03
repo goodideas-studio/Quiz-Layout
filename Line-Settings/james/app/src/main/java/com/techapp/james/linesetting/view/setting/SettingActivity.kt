@@ -16,4 +16,5 @@ class SettingActivity : Activity() {
         settingRecyclerView.adapter = myAdapter
         //settingRecyclerView
     }
+
 }
