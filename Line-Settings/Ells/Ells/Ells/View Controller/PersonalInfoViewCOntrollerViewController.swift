@@ -38,11 +38,14 @@ class PersonalInfoViewController: UIViewController {
       
     }
   }
+  
+  
   func keepName() {
     let result = userdefault.value(forKey: "UpdatedName") as? String
-    print(result)
     displayName.text = result!
   }
+  
+  
   @IBAction func changeNameBtn(_ sender: UIButton) {
     
     let changeNameVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThridVC") as! ChangeNameViewController
@@ -53,10 +56,8 @@ class PersonalInfoViewController: UIViewController {
 
 
 extension PersonalInfoViewController: UserDefaultDelegate {
-  
  
     func updateName(noNeed: String) {
-//      userdefault.synchronize()
       let result = userdefault.value(forKey: "UpdatedName") as? String
       print(result)
       displayName.text = result!
