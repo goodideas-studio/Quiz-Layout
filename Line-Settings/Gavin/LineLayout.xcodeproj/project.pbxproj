@@ -10,12 +10,13 @@
 		70A83DD82048DCD7007C55CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DD72048DCD7007C55CC /* AppDelegate.swift */; };
 		70A83DDA2048DCD7007C55CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DD92048DCD7007C55CC /* SettingViewController.swift */; };
 		70A83DDD2048DCD7007C55CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A83DDB2048DCD7007C55CC /* Main.storyboard */; };
-		70A83DDF2048DCD7007C55CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A83DDE2048DCD7007C55CC /* Assets.xcassets */; };
 		70A83DE22048DCD7007C55CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A83DE02048DCD7007C55CC /* LaunchScreen.storyboard */; };
 		70A83DEB2048DD2D007C55CC /* SettingTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DEA2048DD2D007C55CC /* SettingTableInfo.swift */; };
 		70A83DEF2048E106007C55CC /* SettingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DEE2048E106007C55CC /* SettingTableCell.swift */; };
 		70A83DF12048E858007C55CC /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DF02048E858007C55CC /* PersonalData.swift */; };
 		70A83DF52048ED10007C55CC /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DF42048ED10007C55CC /* PersonalDataViewController.swift */; };
+		70A83DF820494CE9007C55CC /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A83DF720494CE9007C55CC /* NameViewController.swift */; };
+		70A83DFC204A957A007C55CC /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A83DFB204A957A007C55CC /* Asset.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +24,14 @@
 		70A83DD72048DCD7007C55CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70A83DD92048DCD7007C55CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		70A83DDC2048DCD7007C55CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70A83DDE2048DCD7007C55CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A83DE12048DCD7007C55CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70A83DE32048DCD7007C55CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A83DEA2048DD2D007C55CC /* SettingTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableInfo.swift; sourceTree = "<group>"; };
 		70A83DEE2048E106007C55CC /* SettingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableCell.swift; sourceTree = "<group>"; };
 		70A83DF02048E858007C55CC /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		70A83DF42048ED10007C55CC /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
+		70A83DF720494CE9007C55CC /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		70A83DFB204A957A007C55CC /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "\U0003Asset.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 				70A83DEC2048DE24007C55CC /* Controllers */,
 				70A83DE92048DD0B007C55CC /* Model */,
 				70A83DD72048DCD7007C55CC /* AppDelegate.swift */,
-				70A83DDE2048DCD7007C55CC /* Assets.xcassets */,
+				70A83DFB204A957A007C55CC /* Asset.xcassets */,
 				70A83DE02048DCD7007C55CC /* LaunchScreen.storyboard */,
 				70A83DE32048DCD7007C55CC /* Info.plist */,
 			);
@@ -85,6 +87,7 @@
 		70A83DEC2048DE24007C55CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				70A83DF620494CD5007C55CC /* Name */,
 				70A83DF32048ECF5007C55CC /* PersonalData */,
 				70A83DF22048ECEE007C55CC /* Setting */,
 			);
@@ -114,6 +117,14 @@
 				70A83DF42048ED10007C55CC /* PersonalDataViewController.swift */,
 			);
 			path = PersonalData;
+			sourceTree = "<group>";
+		};
+		70A83DF620494CD5007C55CC /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				70A83DF720494CE9007C55CC /* NameViewController.swift */,
+			);
+			path = Name;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70A83DE22048DCD7007C55CC /* LaunchScreen.storyboard in Resources */,
-				70A83DDF2048DCD7007C55CC /* Assets.xcassets in Resources */,
+				70A83DFC204A957A007C55CC /* Asset.xcassets in Resources */,
 				70A83DDD2048DCD7007C55CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +201,7 @@
 			files = (
 				70A83DDA2048DCD7007C55CC /* SettingViewController.swift in Sources */,
 				70A83DEB2048DD2D007C55CC /* SettingTableInfo.swift in Sources */,
+				70A83DF820494CE9007C55CC /* NameViewController.swift in Sources */,
 				70A83DF52048ED10007C55CC /* PersonalDataViewController.swift in Sources */,
 				70A83DD82048DCD7007C55CC /* AppDelegate.swift in Sources */,
 				70A83DEF2048E106007C55CC /* SettingTableCell.swift in Sources */,

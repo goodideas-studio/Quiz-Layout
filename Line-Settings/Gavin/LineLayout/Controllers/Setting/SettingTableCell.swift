@@ -10,6 +10,6 @@ import UIKit
 
 class SettingTableCell: UITableViewCell {
   
-  @IBOutlet weak var settingTableCellImg: UIImageView!
-  @IBOutlet weak var settingTableCellLabel: UILabel!
+//  @IBOutlet weak var settingTableCellImg: UIImageView!
+//  @IBOutlet weak var settingTableCellLabel: UILabel!
 }
