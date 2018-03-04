@@ -10,10 +10,16 @@ import UIKit
 
 class RootCell: UITableViewCell {
 
+ // @IBOutlet weak var myCell: RootCell!
+  @IBOutlet weak var rootCellImage: UIImageView!
+  
+  @IBOutlet weak var rootCellLabel: UILabel!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+  
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
