@@ -8,27 +8,33 @@
 
 import UIKit
 
-class editNameVC: UIViewController {
-
-    @IBOutlet weak var editNameTextField: UITextField!
+class editNameVC: UIViewController, UITextFieldDelegate {
     
-   
 
+    var countText = 0
+    
+    @IBOutlet weak var editNameTextField: UITextField!
+    @IBOutlet weak var counterLabel: UILabel!
     
     @IBAction func saveName(_ sender: Any) {
         
-        Name.shared.nameField = (editNameTextField.text)!
-
         //回到上一頁
-    self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
+       
+        //儲存輸入資訊
+        UserDefaults.standard.set(editNameTextField.text!, forKey: "name")
+        
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        
+        editNameTextField.borderStyle = .roundedRect
+        
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

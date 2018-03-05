@@ -12,19 +12,27 @@ class personalInfoVC: UITableViewController {
 
     @IBOutlet weak var myNameLabel: UILabel!
     
-
-    override func viewDidAppear(_ animated: Bool) {
-        myNameLabel.text = Name.shared.nameField
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //存取資料
+        let name = UserDefaults.standard.value(forKey: "name") as? String 
+            myNameLabel.text = name
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
 
 }
