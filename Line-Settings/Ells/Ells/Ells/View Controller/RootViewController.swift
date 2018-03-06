@@ -11,7 +11,7 @@ import UIKit
 class RootViewController: UITableViewController {
 
   
-  var myCell: UITableViewCell = RootCell()
+ // var myCell: UITableViewCell = RootCell()
   
   @IBOutlet var myTableView: UITableView!
   
@@ -46,6 +46,9 @@ class RootViewController: UITableViewController {
     
     sectionSets = [0: dataOne, 1: dataTwo, 2: dataThree]
     
+    //this line gets rid of the extra cells in myTableView
+    myTableView.tableFooterView = UIView()
+    //myTableView.separatorStyle = .singleLine
   }
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,8 +69,10 @@ class RootViewController: UITableViewController {
     var cell: RootCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RootCell
     cell.rootCellImage.image = UIImage(named: "\(sectionImages[indexPath.row])")
      cell.rootCellLabel.text = sectionSets[indexPath.section]![indexPath.row]
+    
     //Thread 1: Fatal error: Index out of range
     print(sectionSets[indexPath.section]![indexPath.row])
+    
     
     return cell
   }
@@ -75,7 +80,7 @@ class RootViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     //section header
     let view = UIView()
-    view.backgroundColor = UIColor.init(red: 23 / 255, green: 17 / 255, blue: 46 / 255, alpha: 0.6)
+    view.backgroundColor = UIColor.init(red: 13 / 255, green: 17 / 255, blue: 126 / 255, alpha: 0.45)
     // header icon img
     let image = UIImageView(image: sectionImages[section])
     image.frame = CGRect(x: 5, y: 5, width: 44, height: 44)
@@ -85,13 +90,14 @@ class RootViewController: UITableViewController {
     let label = UILabel()
     label.text = sectionTitles[section]
     label.frame = CGRect(x: 60, y: 5, width: 120, height: 44)
+    label.textColor = UIColor.darkGray
     view.addSubview(label)
     
     return view
   }
   
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 50  //returns the height for section headers
+    return 54  //returns the height for section headers
   }
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,8 +115,6 @@ class RootViewController: UITableViewController {
 //  }
 
   
-  @IBAction func goToEditPage(_ sender: UIButton) {
-    
-  }
+  
   
 }
