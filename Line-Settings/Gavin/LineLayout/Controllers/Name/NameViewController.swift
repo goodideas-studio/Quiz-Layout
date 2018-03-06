@@ -39,11 +39,11 @@ class NameViewController: UIViewController {
 
   @IBAction func confirmBtn(_ sender: Any) {
     setUserDefault()
-    navigationController?.popViewController(animated: true)
   }
   
   func setUserDefault() {
     userDefaults.set(userIDTextField.text, forKey: "name")
+    navigationController?.popViewController(animated: true)
   }
   
   @IBAction func nameTextFieldAction(_ sender: Any) {

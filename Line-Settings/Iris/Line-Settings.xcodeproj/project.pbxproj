@@ -102,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				AC7442D52048DF4E006A526A /* AppDelegate.swift */,
-				AC7442D72048DF4E006A526A /* ViewController.swift */,
-				AC7443032048F803006A526A /* editNameVC.swift */,
-				AC7443072048FFF5006A526A /* personalInfoVC.swift */,
 				AC7442D92048DF4E006A526A /* Main.storyboard */,
+				AC7442D72048DF4E006A526A /* ViewController.swift */,
+				AC7443072048FFF5006A526A /* personalInfoVC.swift */,
+				AC7443032048F803006A526A /* editNameVC.swift */,
 				AC7442DC2048DF4E006A526A /* Assets.xcassets */,
 				AC7442DE2048DF4E006A526A /* LaunchScreen.storyboard */,
 				AC7442E12048DF4E006A526A /* Info.plist */,
