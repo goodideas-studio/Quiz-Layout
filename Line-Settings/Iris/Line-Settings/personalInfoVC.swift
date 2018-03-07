@@ -20,6 +20,7 @@ class personalInfoVC: UITableViewController {
         let name = UserDefaults.standard.value(forKey: "name") as? String 
             myNameLabel.text = name
         
+        
     }
     
     override func viewDidLoad() {
@@ -27,6 +28,8 @@ class personalInfoVC: UITableViewController {
         
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
+        //更改separator顏色來解第一個cell有明顯邊線的問題
+        self.tableView.separatorColor = self.tableView.backgroundColor
 
     }
 
@@ -34,5 +37,5 @@ class personalInfoVC: UITableViewController {
         super.didReceiveMemoryWarning()
       
     }
-
+    
 }
