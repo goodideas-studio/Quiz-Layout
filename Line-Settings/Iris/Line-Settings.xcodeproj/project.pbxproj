@@ -51,6 +51,12 @@
 		AC7442F72048DF4F006A526A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7443032048F803006A526A /* editNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editNameVC.swift; sourceTree = "<group>"; };
 		AC7443072048FFF5006A526A /* personalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalInfoVC.swift; sourceTree = "<group>"; };
+		ACDB27222052BE9300234759 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		ACDB27232052BE9300234759 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ACDB27242052BE9F00234759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		ACDB27252052BE9F00234759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ACDB27262052BEA800234759 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Main.strings; sourceTree = "<group>"; };
+		ACDB27272052BEA800234759 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +224,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = AC7442C92048DF4E006A526A;
@@ -308,6 +313,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC7442DA2048DF4E006A526A /* Base */,
+				ACDB27222052BE9300234759 /* zh-Hant */,
+				ACDB27242052BE9F00234759 /* en */,
+				ACDB27262052BEA800234759 /* ms */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -316,6 +324,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC7442DF2048DF4E006A526A /* Base */,
+				ACDB27232052BE9300234759 /* zh-Hant */,
+				ACDB27252052BE9F00234759 /* en */,
+				ACDB27272052BEA800234759 /* ms */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -384,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

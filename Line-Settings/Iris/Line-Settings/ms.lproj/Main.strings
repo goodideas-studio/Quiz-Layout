@@ -1,0 +1,96 @@
+
+/* Class = "UILabel"; text = "我的帳號"; ObjectID = "1J3-Q9-4Dt"; */
+"1J3-Q9-4Dt.text" = "Akaun";
+
+/* Class = "UILabel"; text = "貼圖"; ObjectID = "1R7-ah-6kb"; */
+"1R7-ah-6kb.text" = "Pengelola Sticker";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "3qX-O7-UBI"; Note = "label -nama"; */
+"3qX-O7-UBI.text" = "Perlihatkan Nama";
+
+/* Class = "UILabel"; text = "appleaple"; ObjectID = "5BU-Z4-1Cm"; */
+"5BU-Z4-1Cm.text" = "appleaple";
+
+/* Class = "UIButton"; normalTitle = "儲存"; ObjectID = "8hA-vE-0Tw"; */
+"8hA-vE-0Tw.normalTitle" = "Simpan";
+
+/* Class = "UILabel"; text = "聊天"; ObjectID = "FKO-J8-4oc"; */
+"FKO-J8-4oc.text" = "Sembang";
+
+/* Class = "UITableViewSection"; footerTitle = "其他用戶可透過 ID 搜尋將您加入好友。"; ObjectID = "HLe-wY-c39"; */
+"HLe-wY-c39.footerTitle" = "Orang boleh tambahkan anda sebagai rakan dengan mencari ID anda.";
+
+/* Class = "UILabel"; text = "主題"; ObjectID = "HjX-Cj-1rb"; */
+"HjX-Cj-1rb.text" = "Tema";
+
+/* Class = "UIBarButtonItem"; title = "    "; ObjectID = "KGp-Qd-5C8"; */
+"KGp-Qd-5C8.title" = "    ";
+
+/* Class = "UINavigationItem"; title = "個人資料"; ObjectID = "LJh-Lk-NjQ"; */
+"LJh-Lk-NjQ.title" = "Profil Saya";
+
+/* Class = "UILabel"; text = "顯示行動條碼"; ObjectID = "Mwh-YM-ZQT"; */
+"Mwh-YM-ZQT.text" = "Kode QR Saya";
+
+/* Class = "UILabel"; text = "自動投稿變更後的個人圖片"; ObjectID = "N6I-zR-QSQ"; */
+"N6I-zR-QSQ.text" = "Kongsi Kemas Kini Media Profil";
+
+/* Class = "UIBarButtonItem"; title = "   "; ObjectID = "OFg-WP-Ysr"; */
+"OFg-WP-Ysr.title" = "   ";
+
+/* Class = "UILabel"; text = "照片．影片"; ObjectID = "PJu-yf-QX5"; */
+"PJu-yf-QX5.text" = "Foto & Video";
+
+/* Class = "UILabel"; text = "+ 886 912 345 678"; ObjectID = "R0o-hq-0rH"; */
+"R0o-hq-0rH.text" = "+ 886 912 345 678";
+
+/* Class = "UILabel"; text = "允許利用 ID 加入好友"; ObjectID = "TSK-kW-OJh"; */
+"TSK-kW-OJh.text" = "Benar Org Tambah ikut ID";
+
+/* Class = "UILabel"; text = "Phone number"; ObjectID = "ZHM-rg-izF"; */
+"ZHM-rg-izF.text" = "Nombor Telefon";
+
+/* Class = "UINavigationItem"; title = "姓名"; ObjectID = "bqg-NV-GxE"; */
+"bqg-NV-GxE.title" = "Nama Tampilan";
+
+/* Class = "UILabel"; text = "隱私設定"; ObjectID = "c64-us-yza"; */
+"c64-us-yza.text" = "Pengaturan Privasi";
+
+/* Class = "UITableViewSection"; footerTitle = "個人圖片變更完畢之後，將會自動投稿到動態消息上。"; ObjectID = "dm7-7Q-g7U"; */
+"dm7-7Q-g7U.footerTitle" = "Kongsi kemas kini media profil pada Timeline";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "edK-ZL-Jp9"; */
+"edK-ZL-Jp9.title" = "  ";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "fNb-7O-fuP"; */
+"fNb-7O-fuP.text" = "ID";
+
+/* Class = "UILabel"; text = "我的錢包"; ObjectID = "geZ-ol-TPF"; */
+"geZ-ol-TPF.text" = "Pengurus Syiling";
+
+/* Class = "UINavigationItem"; title = "設定"; ObjectID = "ha3-0M-dh3"; */
+"ha3-0M-dh3.title" = "Seting";
+
+/* Class = "UILabel"; text = "移動帳號設定"; ObjectID = "lCK-dO-Zhx"; */
+"lCK-dO-Zhx.text" = "Pemindahan Akaun";
+
+/* Class = "UILabel"; text = "Keep"; ObjectID = "lMS-Hx-vnR"; */
+"lMS-Hx-vnR.text" = "Keep";
+
+/* Class = "UILabel"; text = " "; ObjectID = "pdj-Mk-vPE"; */
+"pdj-Mk-vPE.text" = " ";
+
+/* Class = "UILabel"; text = "0/20"; ObjectID = "qZy-tZ-Ddp"; */
+"qZy-tZ-Ddp.text" = "0/20";
+
+/* Class = "UITableViewSection"; headerTitle = "狀態消息"; ObjectID = "s0Z-qy-k9J"; */
+"s0Z-qy-k9J.headerTitle" = "Pesan Status";
+
+/* Class = "UILabel"; text = "iPoneX now on sale!"; ObjectID = "sgQ-50-YXV"; */
+"sgQ-50-YXV.text" = "iPoneX now on sale!";
+
+/* Class = "UILabel"; text = "提醒"; ObjectID = "xnG-Tm-Xzb"; */
+"xnG-Tm-Xzb.text" = "Pemberitahuan";
+
+/* Class = "UILabel"; text = "個人資料"; ObjectID = "yAs-QL-SXw"; */
+"yAs-QL-SXw.text" = "Profil";

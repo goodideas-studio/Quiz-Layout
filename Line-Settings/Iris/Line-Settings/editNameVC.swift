@@ -62,7 +62,7 @@ class editNameVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         editNameTextField.borderStyle = .roundedRect
-       // editNameTextField.delegate = self
+        editNameTextField.delegate = self
         
     }
     

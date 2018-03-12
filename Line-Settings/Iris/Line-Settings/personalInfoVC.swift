@@ -21,6 +21,7 @@ class personalInfoVC: UITableViewController {
             myNameLabel.text = name
         
         
+        
     }
     
     override func viewDidLoad() {
@@ -31,6 +32,13 @@ class personalInfoVC: UITableViewController {
         //更改separator顏色來解第一個cell有明顯邊線的問題
         self.tableView.separatorColor = self.tableView.backgroundColor
 
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let headerView = view as! UITableViewHeaderFooterView
+      //將 header 文字修改為非全大寫
+        if section == 3 {
+            headerView.textLabel?.text = "Status message"}
     }
 
     override func didReceiveMemoryWarning() {
