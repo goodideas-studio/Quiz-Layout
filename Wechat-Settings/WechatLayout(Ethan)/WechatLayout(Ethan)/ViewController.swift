@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     let section2Model = ["收藏","我的相簿","優惠券","貼圖市集"]
     let section2Images = ["icon-collection","icon-album","icon-coupon","icon-market"]
     
+    var userName:String?
+    
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -26,6 +28,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userName = UserDefaults.standard.string(forKey: "userName")
+        self.tableView.reloadData()
     }
 
 
@@ -57,7 +65,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
             let userCell = tableView.dequeueReusableCell(withIdentifier: "Usercell", for: indexPath)
             userCell.imageView?.image = #imageLiteral(resourceName: "s2")
             userCell.detailTextLabel?.text = "WeChatID: slamdon"
-            userCell.textLabel?.text = "Don"
+            userCell.textLabel?.text = userName
             return userCell
         }else if indexPath.section == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

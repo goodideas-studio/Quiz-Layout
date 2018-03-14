@@ -186,7 +186,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="enterName:" destination="zQs-JB-Hoh" eventType="editingDidEnd" id="Rgw-9X-wh9"/>
+                                    <action selector="textFieldChange:" destination="zQs-JB-Hoh" eventType="editingChanged" id="UF7-TU-lbw"/>
                                 </connections>
                             </textField>
                         </subviews>

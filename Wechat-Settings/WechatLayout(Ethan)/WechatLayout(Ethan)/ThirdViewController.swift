@@ -11,6 +11,9 @@ import UIKit
 class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBAction func textFieldChange(_ sender: UITextField) {
+        barButtonState()
+    }
     
     @IBOutlet weak var barButton: UIBarButtonItem!
     
@@ -19,9 +22,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func enterName(_ sender: UITextField) {
-        
-    }
+ 
     
     func barButtonState(){
         if textField.text == ""{
@@ -43,6 +44,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textField.text = UserDefaults.standard.string(forKey: "userName")
+       
     }
     
     override func didReceiveMemoryWarning() {
