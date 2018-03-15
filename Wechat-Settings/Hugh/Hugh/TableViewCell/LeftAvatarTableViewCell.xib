@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="LeftAvatarTableViewCell" customModule="Hugh" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="5an-52-crq">
+                        <rect key="frame" x="20" y="11" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5an-52-crq" secondAttribute="height" multiplier="1:1" id="UZc-0R-GO3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAj-Fy-BfL">
+                        <rect key="frame" x="96" y="27.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeChat ID：shavenking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNV-aI-ZG4">
+                        <rect key="frame" x="96" y="50" width="166" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZAj-Fy-BfL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.85" id="3KW-p6-9t1"/>
+                    <constraint firstItem="HNV-aI-ZG4" firstAttribute="top" secondItem="ZAj-Fy-BfL" secondAttribute="bottom" constant="1.5" id="3Sk-7M-9uv"/>
+                    <constraint firstItem="5an-52-crq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6Ts-oH-yR5"/>
+                    <constraint firstItem="5an-52-crq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="NNy-Qz-cgP"/>
+                    <constraint firstItem="HNV-aI-ZG4" firstAttribute="leading" secondItem="5an-52-crq" secondAttribute="trailing" constant="8" id="Sif-DS-0A9"/>
+                    <constraint firstItem="ZAj-Fy-BfL" firstAttribute="leading" secondItem="5an-52-crq" secondAttribute="trailing" constant="8" id="eH6-vy-4iP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5an-52-crq" secondAttribute="bottom" id="nZO-g5-7XK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="ZAj-Fy-BfL" id="wTH-S0-sM7"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="81.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avatar" width="88" height="93"/>
+    </resources>
+</document>
