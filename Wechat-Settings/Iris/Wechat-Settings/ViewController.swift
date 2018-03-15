@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Hugh
+//  Wechat-Settings
 //
-//  Created by Andy Tsai on 14/03/2018.
-//  Copyright © 2018 Andy Tsai. All rights reserved.
+//  Created by Peichun Tsai on 2018/3/14.
+//  Copyright © 2018年 Peichun Tsai. All rights reserved.
 //
 
 import UIKit

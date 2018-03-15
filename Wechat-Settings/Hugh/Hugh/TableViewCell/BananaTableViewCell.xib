@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="BananaTableViewCell" customModule="Hugh" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="qHS-Un-rEb">
+                        <rect key="frame" x="256" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qHS-Un-rEb" secondAttribute="height" multiplier="44:44" id="LvO-tx-wY7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-Mv-k0s">
+                        <rect key="frame" x="16" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIU-kd-ama">
+                        <rect key="frame" x="236" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8w-AC-P4I">
+                        <rect key="frame" x="236" y="12" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IZc-Mv-k0s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="86f-eY-M1o"/>
+                    <constraint firstItem="IZc-Mv-k0s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CWU-mB-PT4"/>
+                    <constraint firstItem="qHS-Un-rEb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="DP8-CY-GZM"/>
+                    <constraint firstItem="R8w-AC-P4I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FvC-Pk-fjf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VIU-kd-ama" secondAttribute="trailing" id="Sc9-5B-oxh"/>
+                    <constraint firstItem="VIU-kd-ama" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XT8-a0-zJO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qHS-Un-rEb" secondAttribute="bottom" id="oL8-4j-ZFv"/>
+                    <constraint firstItem="qHS-Un-rEb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="sTE-X8-rb4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="R8w-AC-P4I" secondAttribute="trailing" id="v1R-Ht-KOO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="qHS-Un-rEb" id="q7f-gz-sy8"/>
+                <outlet property="secondaryTitleLabel" destination="VIU-kd-ama" id="ZrN-CC-aKw"/>
+                <outlet property="titleLabel" destination="IZc-Mv-k0s" id="00c-bZ-ouV"/>
+                <outlet property="usernameLabel" destination="R8w-AC-P4I" id="9Hj-qc-r61"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avatar" width="88" height="93"/>
+    </resources>
+</document>
