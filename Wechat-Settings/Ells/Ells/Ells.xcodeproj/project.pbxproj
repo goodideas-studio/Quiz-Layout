@@ -15,8 +15,9 @@
 		4DA4D5BD2059125700C2B51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4D5BB2059125700C2B51B /* LaunchScreen.storyboard */; };
 		4DA4D5C52059172F00C2B51B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D5C42059172F00C2B51B /* SecondViewController.swift */; };
 		4DA4D5C72059175100C2B51B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D5C62059175100C2B51B /* ThirdViewController.swift */; };
-		4DA4D5C920591ABC00C2B51B /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D5C820591ABC00C2B51B /* MyCell.swift */; };
+		4DA4D5C920591ABC00C2B51B /* MyCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D5C820591ABC00C2B51B /* MyCell2.swift */; };
 		4DA4D5CB20591B5600C2B51B /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D5CA20591B5600C2B51B /* FinalViewController.swift */; };
+		4DD91F7B205A1D880099F1BC /* MyCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD91F7A205A1D880099F1BC /* MyCell1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		4DA4D5BE2059125700C2B51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA4D5C42059172F00C2B51B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4DA4D5C62059175100C2B51B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		4DA4D5C820591ABC00C2B51B /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		4DA4D5C820591ABC00C2B51B /* MyCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell2.swift; sourceTree = "<group>"; };
 		4DA4D5CA20591B5600C2B51B /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		4DD91F7A205A1D880099F1BC /* MyCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,8 @@
 				4DA4D5C42059172F00C2B51B /* SecondViewController.swift */,
 				4DA4D5C62059175100C2B51B /* ThirdViewController.swift */,
 				4DA4D5CA20591B5600C2B51B /* FinalViewController.swift */,
-				4DA4D5C820591ABC00C2B51B /* MyCell.swift */,
+				4DA4D5C820591ABC00C2B51B /* MyCell2.swift */,
+				4DD91F7A205A1D880099F1BC /* MyCell1.swift */,
 				4DA4D5B92059125700C2B51B /* Assets.xcassets */,
 				4DA4D5BB2059125700C2B51B /* LaunchScreen.storyboard */,
 				4DA4D5BE2059125700C2B51B /* Info.plist */,
@@ -155,9 +158,10 @@
 				4DA4D5CB20591B5600C2B51B /* FinalViewController.swift in Sources */,
 				4DA4D5B22059125700C2B51B /* ViewController.swift in Sources */,
 				4DA4D5C72059175100C2B51B /* ThirdViewController.swift in Sources */,
-				4DA4D5C920591ABC00C2B51B /* MyCell.swift in Sources */,
+				4DA4D5C920591ABC00C2B51B /* MyCell2.swift in Sources */,
 				4DA4D5B82059125700C2B51B /* Ells.xcdatamodeld in Sources */,
 				4DA4D5B02059125700C2B51B /* AppDelegate.swift in Sources */,
+				4DD91F7B205A1D880099F1BC /* MyCell1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

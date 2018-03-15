@@ -16,22 +16,37 @@ class FinalViewController: UIViewController {
   
   @IBOutlet weak var inputNameFd: UITextField!
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
+    self.navigationController?.navigationBar.tintColor = UIColor.white
+    self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         // Do any additional setup after loading the view.
-    }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+  }
     
   @IBAction func saveName(_ sender: UIBarButtonItem) {
-    userdefaults.set(String(inputNameFd.text!), forKey: "name")
+    userdefaults.set(inputNameFd.text, forKey: "name")
     
     userdefaults.synchronize()
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let newName = String(describing: userdefaults.value(forKey: "name"))
+    
+    guard let identifier = segue.identifier
+      else { return }
+
+    guard let destination = segue.destination as? ThirdViewController else {
+     fatalError()
+    }
+    
+    self.present(destination, animated: true, completion: nil)
+    
+  }
   
 
 }

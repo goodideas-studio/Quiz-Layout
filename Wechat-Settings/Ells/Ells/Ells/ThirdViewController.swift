@@ -10,36 +10,66 @@ import UIKit
 
 class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
-  var infoArray: [String] = ["名字","我的 WeChat ID", "QRCode", "更多"]
+  let userdefualts = UserDefaults.standard
+  
+  var infoArray: [String] = [" ", "我的 WeChat ID", "QRCode", "更多"]
   
   @IBOutlet weak var myTableView: UITableView!
+  
+  //@IBOutlet weak var nameLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     myTableView.dataSource = self
     myTableView.delegate = self
     
+    self.navigationController?.navigationBar.tintColor = UIColor.white
+    self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+    
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    
+    
+    myTableView.reloadData()
+    
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return infoArray.count
+    return 4
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MyCell
-    cell.cellLabel.text = infoArray[indexPath.row]
+    let cell1: MyCell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1") as! MyCell1
+    let cell2: MyCell2 = tableView.dequeueReusableCell(withIdentifier: "Cell2") as! MyCell2
+    cell2.cellLabel.text = infoArray[indexPath.row ]
     //cell.textLabel?.text = infoArray[indexPath.row]
     
-    if indexPath == [0, 0] {
-      cell.accessoryType = .disclosureIndicator
-      
-    }
-    if indexPath == [0, 2] || indexPath == [0, 3] {
-      cell.accessoryType = .disclosureIndicator
-    }
+    let nameText = userdefualts.string(forKey: "name")
+    cell1.rightSidelabel.setTitle(nameText, for: UIControlState.normal)
     
-    return cell
+    
+    switch indexPath {
+    case [0, 0]:
+      cell1.accessoryType = .disclosureIndicator
+      cell1.textLabel?.text = "名字"
+      //cell1.rightSidelabel.currentTitle = "LeBon"
+      return cell1
+    case [0, 1] :
+      cell2.accessoryType = .none
+      return cell2
+    case [0, 2]:
+      cell2.accessoryType = .disclosureIndicator
+      return cell2
+    case [0, 3]:
+      return cell2
+    default:
+      return cell2
+    }
   }
+  
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if indexPath == [0, 0] {
@@ -61,5 +91,10 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     performSegue(withIdentifier: "GoGo", sender: nil)
   }
   
-
+  @IBAction func editName(_ sender: UIButton) {
+    
+    performSelector(inBackground: "GoGo", with: nil)
+  }
+  
+  
 }

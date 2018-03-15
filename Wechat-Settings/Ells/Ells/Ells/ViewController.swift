@@ -13,6 +13,9 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationController?.navigationBar.tintColor = UIColor.white
+    self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
   }
 
   override func didReceiveMemoryWarning() {
