@@ -55,7 +55,6 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     case [0, 0]:
       cell1.accessoryType = .disclosureIndicator
       cell1.textLabel?.text = "名字"
-      //cell1.rightSidelabel.currentTitle = "LeBon"
       return cell1
     case [0, 1] :
       cell2.accessoryType = .none
@@ -93,7 +92,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
   
   @IBAction func editName(_ sender: UIButton) {
     
-    performSelector(inBackground: "GoGo", with: nil)
+    performSegue(withIdentifier: "GoGo", sender: nil)
   }
   
   
