@@ -13,6 +13,7 @@ class FinalViewController: UIViewController {
 
   let userdefaults = UserDefaults.standard
   
+  @IBOutlet weak var doneEditingBtn: UIBarButtonItem!
   
   @IBOutlet weak var inputNameFd: UITextField!
   override func viewDidLoad() {
@@ -21,6 +22,8 @@ class FinalViewController: UIViewController {
     self.navigationController?.navigationBar.tintColor = UIColor.white
     self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         // Do any additional setup after loading the view.
+    
+    doneEditingBtn.tintColor = UIColor(red: 22 / 255, green: 247 / 255, blue: 216 / 255, alpha: 0.88)
   }
 
   override func didReceiveMemoryWarning() {
@@ -33,20 +36,34 @@ class FinalViewController: UIViewController {
     
     userdefaults.synchronize()
   }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let newName = String(describing: userdefaults.value(forKey: "name"))
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    let newName = String(describing: userdefaults.value(forKey: "name"))
+//
+//    guard let identifier = segue.identifier
+//      else { return }
+//    guard let destination = segue.destination as? ThirdViewController else {
+//     fatalError()
+//    }
+//    self.present(destination, animated: true, completion: nil)
+//  }
+//
+  @IBAction func cancelEditing(_ sender: Any) {
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      guard segue.identifier != nil
+        else { return }
+      guard let destination = segue.destination as? ThirdViewController else {
+        fatalError()
+      }
+      print(destination)
     
-    guard let identifier = segue.identifier
-      else { return }
-
-    guard let destination = segue.destination as? ThirdViewController else {
-     fatalError()
+      self.dismiss(animated: true) {
+        self.present(destination, animated: true, completion: nil)
+      }
     }
     
-    self.present(destination, animated: true, completion: nil)
+    print("leave")
     
+
   }
   
-
 }

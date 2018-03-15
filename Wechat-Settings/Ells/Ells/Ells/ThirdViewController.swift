@@ -27,11 +27,11 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     self.navigationController?.navigationBar.tintColor = UIColor.white
     self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
     
+    myTableView.separatorInset.left = 10
     
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    
     
     myTableView.reloadData()
     
@@ -47,6 +47,9 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     cell2.cellLabel.text = infoArray[indexPath.row ]
     //cell.textLabel?.text = infoArray[indexPath.row]
     
+    //cell1.frame.origin.x = 2
+  
+    //cell2.frame.origin.x = 2
     let nameText = userdefualts.string(forKey: "name")
     cell1.rightSidelabel.setTitle(nameText, for: UIControlState.normal)
     
@@ -63,6 +66,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
       cell2.accessoryType = .disclosureIndicator
       return cell2
     case [0, 3]:
+      cell2.accessoryType = .disclosureIndicator
       return cell2
     default:
       return cell2
@@ -77,7 +81,12 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 40
+    return 46
+  }
+  
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    let view = UIView()
+    return view
   }
   
     override func didReceiveMemoryWarning() {
