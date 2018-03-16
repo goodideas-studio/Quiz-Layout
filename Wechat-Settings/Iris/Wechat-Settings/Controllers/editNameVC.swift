@@ -16,7 +16,6 @@ class editNameVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveBtn(_ sender: Any) {
         
-        
         if editTextField.text == "" {
           
             let alert = UIAlertController(title: "", message: "必須輸入名字，請重新填寫。", preferredStyle: .alert)
@@ -24,7 +23,7 @@ class editNameVC: UIViewController, UITextFieldDelegate {
                 return
             })
             alert.addAction(confirmBtn)
-            present(alert, animated: true, completion: nil)
+            present(alert,   animated: true, completion: nil)
         }
        
         else {
@@ -46,7 +45,8 @@ class editNameVC: UIViewController, UITextFieldDelegate {
         }
     }
    
-    
+   
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
