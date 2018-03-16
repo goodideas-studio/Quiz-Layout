@@ -499,15 +499,16 @@
                                 <action selector="cancelBtn:" destination="cjq-l7-8n4" id="9qG-9s-ghT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="fQ8-Gc-ArN">
+                        <barButtonItem key="rightBarButtonItem" title="完成" style="done" id="fQ8-Gc-ArN">
                             <color key="tintColor" red="0.27450980392156865" green="0.48627450980392156" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="saveBtn:" destination="cjq-l7-8n4" id="T8P-qy-x9m"/>
+                                <action selector="saveBtn:" destination="cjq-l7-8n4" id="aoI-Tb-owA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="editTextField" destination="jrk-qt-1Rg" id="d8H-ux-LgY"/>
+                        <outlet property="rightBtn" destination="fQ8-Gc-ArN" id="1Tj-Bl-efP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxp-zE-49T" userLabel="First Responder" sceneMemberID="firstResponder"/>
