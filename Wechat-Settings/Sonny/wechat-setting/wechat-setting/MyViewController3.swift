@@ -27,7 +27,8 @@ class MyViewController3: UIViewController {
     @IBOutlet weak var yesbtn: UIBarButtonItem!
     @IBAction func cancelbtn(_ sender: Any) {
         print("VC 3 : cancel btn")
-        performSegue(withIdentifier: "backToPage2", sender: nil)
+        navigationController?.popViewController(animated: true)
+//        performSegue(withIdentifier: "backToPage2", sender: nil)
         
     }
    
@@ -38,7 +39,8 @@ class MyViewController3: UIViewController {
         print(textfield.text)
         print("VC 3 : yes btn ")
         UserDefaults.standard.synchronize()
-        performSegue(withIdentifier: "backToPage2", sender: nil)
+        navigationController?.popViewController(animated: true)
+//        performSegue(withIdentifier: "backToPage2", sender: nil)
         
     }
     

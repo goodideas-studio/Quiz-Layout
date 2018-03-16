@@ -404,7 +404,7 @@
             </objects>
             <point key="canvasLocation" x="1925.5999999999999" y="-50.824587706146929"/>
         </scene>
-        <!--Title-->
+        <!--設定名字-->
         <scene sceneID="gEb-No-gSK">
             <objects>
                 <viewController id="Dc7-RM-hDJ" customClass="MyViewController3" customModule="wechat_setting" customModuleProvider="target" sceneMemberID="viewController">
@@ -413,7 +413,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入你的名字" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4t-Kz-EaJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YDr-22-f7g"/>
                                 </constraints>
@@ -434,7 +434,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xaD-j1-5xC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zz1-d3-aS7">
+                    <navigationItem key="navigationItem" title="設定名字" id="zz1-d3-aS7">
                         <barButtonItem key="leftBarButtonItem" title="取消" id="QQV-E5-aH0">
                             <connections>
                                 <action selector="cancelbtn:" destination="Dc7-RM-hDJ" id="g5d-5B-Rpu"/>
@@ -449,7 +449,6 @@
                     <connections>
                         <outlet property="textfield" destination="v4t-Kz-EaJ" id="MBB-9H-jRp"/>
                         <outlet property="yesbtn" destination="K67-Em-sQU" id="Rok-OC-fAv"/>
-                        <segue destination="crs-xj-QFj" kind="show" identifier="backToPage2" id="SRD-u9-fdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH5-u1-4Tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,8 +484,4 @@
         <image name="icon-pocket" width="28" height="22"/>
         <image name="icon-setting" width="27" height="31"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gfH-I2-roB"/>
-        <segue reference="SRD-u9-fdB"/>
-    </inferredMetricsTieBreakers>
 </document>
