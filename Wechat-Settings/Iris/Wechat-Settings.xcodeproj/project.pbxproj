@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0D33A1205A187A00123C1E /* editNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D33A0205A187A00123C1E /* editNameVC.swift */; };
 		AC44BD032059528C001CC5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44BD022059528C001CC5CB /* AppDelegate.swift */; };
-		AC44BD052059528C001CC5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44BD042059528C001CC5CB /* ViewController.swift */; };
 		AC44BD082059528C001CC5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC44BD062059528C001CC5CB /* Main.storyboard */; };
 		AC44BD0A2059528C001CC5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC44BD092059528C001CC5CB /* Assets.xcassets */; };
 		AC44BD0D2059528C001CC5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC44BD0B2059528C001CC5CB /* LaunchScreen.storyboard */; };
 		AC44BD182059528C001CC5CB /* Wechat_SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44BD172059528C001CC5CB /* Wechat_SettingsTests.swift */; };
 		AC44BD232059528D001CC5CB /* Wechat_SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44BD222059528D001CC5CB /* Wechat_SettingsUITests.swift */; };
+		AC614980205A0C5100751043 /* personalInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61497F205A0C5100751043 /* personalInfoTableVC.swift */; };
+		ACD3CD66205A70F60063B157 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3CD65205A70F60063B157 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0D33A0205A187A00123C1E /* editNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editNameVC.swift; sourceTree = "<group>"; };
 		AC44BCFF2059528C001CC5CB /* Wechat-Settings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wechat-Settings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44BD022059528C001CC5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC44BD042059528C001CC5CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC44BD072059528C001CC5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC44BD092059528C001CC5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC44BD0C2059528C001CC5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		AC44BD1E2059528D001CC5CB /* Wechat-SettingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wechat-SettingsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44BD222059528D001CC5CB /* Wechat_SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat_SettingsUITests.swift; sourceTree = "<group>"; };
 		AC44BD242059528D001CC5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC61497F205A0C5100751043 /* personalInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalInfoTableVC.swift; sourceTree = "<group>"; };
+		ACD3CD65205A70F60063B157 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0D33A2205A188400123C1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACD3CD65205A70F60063B157 /* MainVC.swift */,
+				AC61497F205A0C5100751043 /* personalInfoTableVC.swift */,
+				AC0D33A0205A187A00123C1E /* editNameVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC0D33A3205A189400123C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC44BD062059528C001CC5CB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AC44BCF62059528C001CC5CB = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				AC44BD022059528C001CC5CB /* AppDelegate.swift */,
-				AC44BD042059528C001CC5CB /* ViewController.swift */,
-				AC44BD062059528C001CC5CB /* Main.storyboard */,
+				AC0D33A2205A188400123C1E /* Controllers */,
+				AC0D33A3205A189400123C1E /* View */,
 				AC44BD092059528C001CC5CB /* Assets.xcassets */,
 				AC44BD0B2059528C001CC5CB /* LaunchScreen.storyboard */,
 				AC44BD0E2059528C001CC5CB /* Info.plist */,
@@ -259,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC44BD052059528C001CC5CB /* ViewController.swift in Sources */,
+				ACD3CD66205A70F60063B157 /* MainVC.swift in Sources */,
 				AC44BD032059528C001CC5CB /* AppDelegate.swift in Sources */,
+				AC614980205A0C5100751043 /* personalInfoTableVC.swift in Sources */,
+				AC0D33A1205A187A00123C1E /* editNameVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
