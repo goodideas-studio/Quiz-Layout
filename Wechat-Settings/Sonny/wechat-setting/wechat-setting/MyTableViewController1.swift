@@ -9,10 +9,22 @@
 import UIKit
 
 class MyTableViewController1: UITableViewController {
+    
+    
+    let sectionArray1 = ["","","",""]
+    let sectionArray2 = ["錢包","","",""]
+    let sectionArray3 = ["收藏", "我的相簿" , "優惠卷","貼圖市集"]
+    let sectionArray4 = ["設定","","",""]
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UserDefaults.standard.set("", forKey: "name")
+        print("VC 1 : what is your name")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,27 +37,42 @@ class MyTableViewController1: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let aView = UIView()
+        
+        
+        return aView
+    }
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 11
+//    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+    
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//
+//        switch indexPath.row {
+//        case 0:
+//
+//            return cell
+//
+//        default:
+//            return cell
+//        }
+//
+//        //return cell
+//    }
+ 
 
     /*
     // Override to support conditional editing of the table view.

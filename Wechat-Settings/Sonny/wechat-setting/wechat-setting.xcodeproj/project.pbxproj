@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E04529CE205A15C300031EBF /* MyViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04529CD205A15C300031EBF /* MyViewController3.swift */; };
 		E096BBBC2059112200C108EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096BBBB2059112200C108EA /* AppDelegate.swift */; };
-		E096BBBE2059112200C108EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096BBBD2059112200C108EA /* ViewController.swift */; };
 		E096BBC12059112200C108EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E096BBBF2059112200C108EA /* Main.storyboard */; };
 		E096BBC32059112200C108EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E096BBC22059112200C108EA /* Assets.xcassets */; };
 		E096BBC62059112200C108EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E096BBC42059112200C108EA /* LaunchScreen.storyboard */; };
+		E096BBCE2059156800C108EA /* MyTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096BBCD2059156800C108EA /* MyTableViewController1.swift */; };
+		E096BBD02059326500C108EA /* MyTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096BBCF2059326500C108EA /* MyTableViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E04529CD205A15C300031EBF /* MyViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController3.swift; sourceTree = "<group>"; };
 		E096BBB82059112200C108EA /* wechat-setting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wechat-setting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E096BBBB2059112200C108EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E096BBBD2059112200C108EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E096BBC02059112200C108EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E096BBC22059112200C108EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E096BBC52059112200C108EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E096BBC72059112200C108EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E096BBCD2059156800C108EA /* MyTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController1.swift; sourceTree = "<group>"; };
+		E096BBCF2059326500C108EA /* MyTableViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				E096BBBB2059112200C108EA /* AppDelegate.swift */,
-				E096BBBD2059112200C108EA /* ViewController.swift */,
 				E096BBBF2059112200C108EA /* Main.storyboard */,
+				E04529CD205A15C300031EBF /* MyViewController3.swift */,
+				E096BBCF2059326500C108EA /* MyTableViewController2.swift */,
+				E096BBCD2059156800C108EA /* MyTableViewController1.swift */,
 				E096BBC22059112200C108EA /* Assets.xcassets */,
 				E096BBC42059112200C108EA /* LaunchScreen.storyboard */,
 				E096BBC72059112200C108EA /* Info.plist */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E096BBBE2059112200C108EA /* ViewController.swift in Sources */,
+				E096BBCE2059156800C108EA /* MyTableViewController1.swift in Sources */,
+				E096BBD02059326500C108EA /* MyTableViewController2.swift in Sources */,
+				E04529CE205A15C300031EBF /* MyViewController3.swift in Sources */,
 				E096BBBC2059112200C108EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
