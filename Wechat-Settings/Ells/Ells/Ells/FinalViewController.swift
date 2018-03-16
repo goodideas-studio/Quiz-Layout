@@ -23,7 +23,7 @@ class FinalViewController: UIViewController {
     self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         // Do any additional setup after loading the view.
     
-    doneEditingBtn.tintColor = UIColor(red: 22 / 255, green: 247 / 255, blue: 216 / 255, alpha: 0.88)
+    doneEditingBtn.tintColor = UIColor(red: 62 / 255, green: 247 / 255, blue: 216 / 255, alpha: 0.88)
   }
 
   override func didReceiveMemoryWarning() {
@@ -32,35 +32,20 @@ class FinalViewController: UIViewController {
   }
     
   @IBAction func saveName(_ sender: UIBarButtonItem) {
-    userdefaults.set(inputNameFd.text, forKey: "name")
-    
+    if inputNameFd.text?.count != 0 {
+      userdefaults.set(inputNameFd.text, forKey: "name")
+    } else {
+      let alert = UIAlertController(title: "Boomer", message: "Please enter your name", preferredStyle: .alert)
+      let alertCancel = UIAlertAction(title: "See", style: .cancel, handler: nil)
+      alert.addAction(alertCancel)
+      self.present(alert, animated: true, completion: nil)
+    }
     userdefaults.synchronize()
   }
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    let newName = String(describing: userdefaults.value(forKey: "name"))
-//
-//    guard let identifier = segue.identifier
-//      else { return }
-//    guard let destination = segue.destination as? ThirdViewController else {
-//     fatalError()
-//    }
-//    self.present(destination, animated: true, completion: nil)
-//  }
-//
+
   @IBAction func cancelEditing(_ sender: Any) {
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      guard segue.identifier != nil
-        else { return }
-      guard let destination = segue.destination as? ThirdViewController else {
-        fatalError()
-      }
-      print(destination)
-    
-      self.dismiss(animated: true) {
-        self.present(destination, animated: true, completion: nil)
-      }
-    }
-    
+
+    navigationController?.popViewController(animated: true)
     print("leave")
     
 
