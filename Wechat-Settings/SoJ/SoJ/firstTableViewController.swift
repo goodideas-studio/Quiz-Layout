@@ -57,19 +57,22 @@ class firstTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let photoCell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
+        
+        
         
         switch indexPath.row {
         case 0:
+            let photoCell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoCell
             photoCell.nameLabel.text = UserDefaults.standard.object(forKey: "name") as? String
             photoCell.IDLabel.text = "WeChat ID: Kao1109"
             photoCell.accessoryType = .disclosureIndicator
             return photoCell
         case 1, 3, 8:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
             cell.backgroundColor = UIColor(red: 240/255, green: 239/255, blue: 245/255, alpha: 1)
             return cell
         default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
             cell.accessoryType = .disclosureIndicator
             cell.imageView?.image = UIImage(named: iconArray[indexPath.row])
             cell.textLabel?.text = dataArray[indexPath.row]
